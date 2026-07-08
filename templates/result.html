@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Resume Analysis Report</h1>
+
+    <div class="card">
+
+        <h2>📄 Uploaded Resume</h2>
+
+        <p>{{ filename }}</p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>✅ Skills Detected</h2>
+
+        {% if skills %}
+
+        <ul>
+
+            {% for skill in skills %}
+
+            <li>{{ skill }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+
+        <p>No Skills Found.</p>
+
+        {% endif %}
+
+    </div>
+
+    <div class="card">
+
+        <h2>💼 Top Job Recommendations</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Job Role</th>
+
+                <th>Match %</th>
+
+            </tr>
+
+            {% for item in jobs %}
+
+            <tr>
+
+                <td>{{ item.job }}</td>
+
+                <td>{{ item.score }}%</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <br>
+
+    <a href="/">⬅ Upload Another Resume</a>
+
+</div>
+
+</body>
+
+</html>
