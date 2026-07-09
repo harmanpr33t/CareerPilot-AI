@@ -1,89 +1,61 @@
-# Resume Skill Extractor & Job Recommendation System
+# 🚀 CareerPilot AI
+
+An AI-powered Resume Analysis and Job Recommendation System built using Python, Flask and Machine Learning.
 
 ## 📌 Overview
 
-This is an AI-based Resume Skill Extractor and Job Recommendation System developed using Python and Flask.
+CareerPilot AI analyzes resumes, extracts technical skills, compares them with job profiles using TF-IDF and Cosine Similarity, and recommends the most suitable career opportunities.
 
-The system allows users to upload their resume in PDF format. It extracts skills from the resume and recommends suitable job roles using TF-IDF and Cosine Similarity.
-
----
-
-## Features
+## ✨ Features
 
 - Resume Upload (PDF)
-- Resume Text Extraction
-- Skill Detection
-- AI-Based Job Recommendation
-- Beautiful User Interface
-- Flask Web Application
+- Resume Parsing
+- Skill Extraction
+- Job Recommendation
+- Missing Skills Analysis
+- ATS-Friendly Resume Score
+- Salary Insights
+- Interview Preparation Resources
+- Responsive User Interface
 
----
-
-## Technologies Used
+## 🛠️ Tech Stack
 
 - Python
 - Flask
-- HTML
-- CSS
+- HTML5
+- CSS3
+- JavaScript
+- Scikit-learn
+- Pandas
+- NumPy
 - PyPDF2
-- Scikit-Learn
-- TF-IDF
-- Cosine Similarity
 
----
+## 📂 Project Structure
 
-## Project Structure
-
-Resume-Skill-Extractor/
-
-app.py
-
-resume_parser.py
-
-skill_extractor.py
-
-recommendation_engine.py
-
-templates/
-
-static/
-
-uploads/
-
-requirements.txt
-
-README.md
-
----
-
-## Installation
-
-```bash
-pip install -r requirements.txt
+```
+CareerPilot-AI
+│
+├── app.py
+├── requirements.txt
+├── resume_parser.py
+├── recommendation_engine.py
+├── skill_extractor.py
+├── utils.py
+├── data/
+├── templates/
+├── static/
+├── uploads/
+└── README.md
 ```
 
-Run
+## 🚀 Future Enhancements
 
-```bash
-python app.py
-```
-
----
-
-## Future Scope
-
-- NLP Based Skill Extraction
-- Resume Score
-- ATS Score
+- AI Resume Builder
+- Cover Letter Generator
+- LinkedIn Profile Analysis
 - Live Job API Integration
-- Database Integration
+- AI Career Assistant
 
----
-
-## Developed By
+## 👨‍💻 Developed By
 
 Harmanpreet Singh
-
-B.Tech Computer Science
-
-Guru Tegh Bahadur Institute of Technology
