@@ -3,12 +3,13 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <title>Resume Skill Extractor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>CareerPilot AI</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
 
@@ -16,21 +17,29 @@
 
 <div class="container">
 
-    <h1>Resume Skill Extractor</h1>
+<div class="hero">
 
-    <p class="subtitle">
-        AI Based Resume Screening & Job Recommendation System
-    </p>
+<h1>🚀 CareerPilot AI</h1>
 
-    <form action="/upload" method="POST" enctype="multipart/form-data">
+<p>AI Powered Resume Analyzer & Job Recommendation System</p>
 
-        <input type="file" name="resume" accept=".pdf" required>
+</div>
 
-        <br><br>
+<form action="/upload" method="POST" enctype="multipart/form-data">
 
-        <button type="submit">Analyze Resume</button>
+<div class="upload-box">
 
-    </form>
+<input type="file" name="resume" accept=".pdf" required>
+
+</div>
+
+<button>
+
+Analyze Resume
+
+</button>
+
+</form>
 
 </div>
 

@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Resume Analysis Result</title>
-
+    <title>CareerPilot AI | Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
@@ -12,38 +11,29 @@
 
 <div class="container">
 
-    <h1>Resume Analysis Report</h1>
+    <h1>🚀 CareerPilot AI</h1>
+    <p class="subtitle">Resume Analysis Report</p>
 
     <div class="card">
-
         <h2>📄 Uploaded Resume</h2>
-
         <p>{{ filename }}</p>
-
     </div>
 
     <div class="card">
+        <h2>📊 ATS Score</h2>
+        <h1>{{ ats_score }}%</h1>
+    </div>
 
-        <h2>✅ Skills Detected</h2>
+    <div class="card">
+        <h2>🧠 Skills Detected</h2>
 
         {% if skills %}
-
-        <ul>
-
             {% for skill in skills %}
-
-            <li>{{ skill }}</li>
-
+                <span class="skill">{{ skill }}</span>
             {% endfor %}
-
-        </ul>
-
         {% else %}
-
-        <p>No Skills Found.</p>
-
+            <p>No Skills Found.</p>
         {% endif %}
-
     </div>
 
     <div class="card">
@@ -53,23 +43,17 @@
         <table>
 
             <tr>
-
                 <th>Job Role</th>
-
                 <th>Match %</th>
-
+                <th>Salary</th>
             </tr>
 
             {% for item in jobs %}
-
             <tr>
-
                 <td>{{ item.job }}</td>
-
                 <td>{{ item.score }}%</td>
-
+                <td>{{ item.salary }}</td>
             </tr>
-
             {% endfor %}
 
         </table>
@@ -78,10 +62,9 @@
 
     <br>
 
-    <a href="/">⬅ Upload Another Resume</a>
+    <a href="/">⬅ Analyze Another Resume</a>
 
 </div>
 
 </body>
-
 </html>

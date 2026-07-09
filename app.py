@@ -8,9 +8,7 @@ from recommendation_engine import recommend_jobs
 app = Flask(__name__)
 
 UPLOAD_FOLDER = "uploads"
-
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
 @app.route("/")
@@ -30,7 +28,6 @@ def upload():
         return "Please select a PDF."
 
     file_path = os.path.join(UPLOAD_FOLDER, file.filename)
-
     file.save(file_path)
 
     resume_text = extract_text_from_pdf(file_path)
@@ -39,11 +36,14 @@ def upload():
 
     jobs = recommend_jobs(skills)
 
+    ats_score = jobs[0]["score"] if jobs else 0
+
     return render_template(
         "result.html",
         filename=file.filename,
         skills=skills,
-        jobs=jobs
+        jobs=jobs,
+        ats_score=ats_score
     )
 
 
